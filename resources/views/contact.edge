@@ -2,8 +2,14 @@
 
 @section('body')
 <div class="row my-4 mx-auto">
-    <h1> {{ contacts.fullName }}</h2>
-    <h3> {{ contacts.email }}</h2>
-    <h5> {{ contacts.message }}</h2>
+   <ul class="list-group">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ contacts.fullName }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ contacts.email }}</h6>
+                <p class="card-text">{{ contacts.message }}</p>
+            </div>
+        </div>
+   </ul>
 </div>
 @endsection
