@@ -22,7 +22,8 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-edge.registerViews(path.join(__dirname, './resources/views'))
+edge.registerViews(path.join(__dirname, './resources/views'));
+// app.use('/public',express.static('public'));
 
 // difine all urls available 
 app.use('/', homeRouter)
