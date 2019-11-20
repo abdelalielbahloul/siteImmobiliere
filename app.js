@@ -10,6 +10,9 @@ const edge = require('edge.js')
 
 // import all routes
 const homeRouter = require('./routes/homeRouter');
+const venterRouter = require('./routes/venteRouter');
+const contactRouter = require('./routes/contactRouter');
+const locationRouter = require('./routes/locationRouter');
 
 // connection to mongoDB
 
@@ -19,10 +22,14 @@ app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-edge.registerViews(path.join(__dirname, './views'))
+edge.registerViews(path.join(__dirname, './resources/views'))
 
 // difine all urls available 
-app.use('/home', homeRouter)
+app.use('/', homeRouter)
+app.use('/vente', venterRouter);
+app.use('/location', locationRouter);
+app.use('/contact', contactRouter);
+
 
 // handle errors for any routes doesan't exists
 app.use((req, res, next) => {
@@ -39,7 +46,7 @@ app.use((req, res, next) => {
 });
 // handl error for not found url and passed the error to next middlware
 app.use( (req, res, next) => {
-    const err = new Error('Not found');
+    const err = new Error('404-Not found');
 
     res.status = 404;
     next(err)
@@ -48,10 +55,8 @@ app.use( (req, res, next) => {
 app.use( (err, req, res, next) => {
 
     res.status = err.status || 500;
-    res.json({
-        error: {
-            message : err.message
-        }
+    res.send({
+        error: err.message
     });
 });
 
