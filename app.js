@@ -20,10 +20,10 @@ const locationRouter = require('./routes/locationRouter');
 // difine all middlwares
 app.use(cors());
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 edge.registerViews(path.join(__dirname, './resources/views'));
-// app.use('/public',express.static('public'));
+app.use('/public',express.static('public'));
 
 // difine all urls available 
 app.use('/', homeRouter)
@@ -56,9 +56,7 @@ app.use( (req, res, next) => {
 app.use( (err, req, res, next) => {
 
     res.status = err.status || 500;
-    res.send({
-        error: err.message
-    });
+    res.send(edge.render('notFound', {}));
 });
 
 module.exports = app;
