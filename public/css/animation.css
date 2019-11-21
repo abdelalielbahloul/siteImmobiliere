@@ -1,0 +1,77 @@
+
+.bar1.change {
+  margin:0px;
+  -o-transform-origin: 0 0;
+  -o-transform: rotate(90deg) scaleX(0.8);
+  -moz-transform-origin: 0 0;
+  -moz-transform: rotate(90deg) scaleX(0.8);
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: rotate(90deg) scaleX(0.8);
+  -ms-transform-origin: 0 0;
+  -ms-transform: rotate(90deg) scaleX(0.8);
+  -khtml-transform-origin: 0 0;
+  -khtml-transform: rotate(90deg) scaleX(0.8);
+  transform-origin: 0 0;
+  transform: rotate(90deg) scaleX(0.8);
+  }
+.bar2.change {
+  margin:0px;
+  -o-transform-origin: 0 0;
+  -o-transform: scaleX(1.5);
+  -moz-transform-origin: 0 0;
+  -moz-transform: scaleX(1.5);
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scaleX(1.5);
+  -ms-transform-origin: 0 0;
+  -ms-transform: scaleX(1.5);
+  -khtml-transform-origin: 0 0;
+  -khtml-transform: scaleX(1.5);
+  transform-origin: 0 0;
+  transform: scaleX(1.5);
+  }
+
+@keyframes cursanim {
+  from {
+    transform: scale(1);
+
+  }
+  to {
+    transform: scale(.7);
+  }
+}
+
+@keyframes cursanim2 {
+  from {
+    transform: scale(1);
+
+  }
+  to {
+    transform: scale(.3);
+  }
+}
+
+
+@keyframes cursanim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100%{
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes anim4 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100%{
+    transform: scale(1);
+  }
+}

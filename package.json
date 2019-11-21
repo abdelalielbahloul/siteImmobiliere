@@ -1,27 +1,28 @@
 {
-  "name": "siteimmobiliere",
+  "name": "real_state",
   "version": "1.0.0",
-  "description": "pgk site immobilière",
+  "description": "un site",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon server.js"
   },
-  "keywords": [
-    "site",
-    "immobilère",
-    "immobilier",
-    "agency",
-    "pgk"
-  ],
-  "author": "pgk conseil",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Echcharqui/newshit.git"
+  },
+  "author": "echcharqui hamza",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Echcharqui/newshit/issues"
+  },
+  "homepage": "https://github.com/Echcharqui/newshit#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
-    "edge.js": "^1.1.4",
     "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
     "mongoose": "^5.7.12",
     "morgan": "^1.9.1"
   }

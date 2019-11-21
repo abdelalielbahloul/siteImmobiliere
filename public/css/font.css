@@ -1,0 +1,14 @@
+@font-face {
+    font-family: menufont;
+    src: url(/fonts/lion_king/lion_king.ttf);
+}
+
+@font-face {
+  font-family: headerText;
+  src: url(/fonts/angelic_bonques_sans/Angelic\ Bonques\ Sans\ Regular.ttf);
+}
+
+@font-face {
+  font-family: icontext;
+  src: url(/fonts/roboto/Roboto-Light.ttf);
+}

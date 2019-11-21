@@ -1,0 +1,22 @@
+@media screen and (max-width: 900px) {
+    #introTextContainer{
+        margin-bottom: 70px;
+    }
+    .major{
+        font-size: 35px;
+    }
+    .minor{
+        font-size: 20px;
+    }
+    #contactContainer{
+        top: 35px;
+        right:20px;        
+    }
+    .textIndex{
+       display: none;
+    }
+
+    .cursor{
+        display: none;
+    }
+  }
