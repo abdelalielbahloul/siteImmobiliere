@@ -10,7 +10,7 @@ server.listen({
     port: port,
     exclusive: true
 },() => {
-    console.log(`Server listing on port ${host}:${port}`);
+    console.log(`Server is runing on http://${host}:${port}`);
 });
 server.on('error',err => {
     console.log(`Server can't start an error has occured ${err}`);
